@@ -1,19 +1,31 @@
 package pl.projektbackend.packageapplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class PackageController {
+
 
 
     @Autowired
     PackageRepository packageRepository;
+    @RequestMapping("/login")
+    public String index(){
+    return "index.html";
+    }
 
+    @RequestMapping("/user_panel")
+    public String user_panel(){
+        return "user_panel.html";
+    }
+    @RequestMapping("/delivery_panel")
+    public String delivery_panel(){
+        return "delivery_panel.html";
+    }
 
     @GetMapping("/user")
     public List<User> getAll(){
