@@ -13,18 +13,18 @@ public class PackageController {
 
     @Autowired
     PackageRepository packageRepository;
-    @RequestMapping("/login")
+    @RequestMapping("/logi")
     public String index(){
-    return "index.html";
+    return "index";
     }
 
     @RequestMapping("/user_panel")
     public String user_panel(){
-        return "user_panel.html";
+        return "user_panel";
     }
     @RequestMapping("/delivery_panel")
     public String delivery_panel(){
-        return "delivery_panel.html";
+        return "delivery_panel";
     }
 
     @GetMapping("/user")
